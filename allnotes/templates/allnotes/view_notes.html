@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Notes</title>
+</head>
+<body>
+    <h2>All Notes</h2>
+    <ul>
+        {% for note in notes %}
+            <li>{{ note.name }} - {{ note.description }} - {{ note.email }} - {{ note.license_end_date }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/add/">Add a new Note</a>
+</body>
+</html>

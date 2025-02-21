@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Notes</title>
+</head>
+<body>
+    <h2>All Notes</h2>
+    <ul>
+        {% for note in notes %}
+            <li>{{ note.name }} - {{ note.description }} - {{ note.email }} - {{ note.license_end_date }}</li>
+        {% empty %}
+            <p>No notes available.</p>
+        {% endfor %}
+    </ul>
+    <br>
+    <a href="/add/">Add a New Note</a>
+</body>
+</html>
